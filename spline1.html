@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet Producer - 첫 번째 Spline</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.35/build/spline-viewer.js"></script>
+</head>
+<body>
+  <section id="viewer-screen">
+    <spline-viewer id="spline" 
+      url="https://prod.spline.design/6RtXcp7l3AqtDYwu/scene.splinecode">
+    </spline-viewer>
+
+    <div id="bigbang-message">
+      <p>행성을 드래그해서 빅뱅을 시작하세요.</p>
+    </div>
+
+    <div id="loading-message" class="hidden">
+      <p>당신의 행성을 찾는 중입니다. 잠시만 기다려주세요.</p>
+      <div class="buffer-container">
+        <p id="buffer-value" class="white-text">0%</p>
+      </div>
+    </div>
+
+    <canvas id="particle-canvas"></canvas>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

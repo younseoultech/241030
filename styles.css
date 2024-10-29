@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Pretendard-Regular', sans-serif;
+  background: radial-gradient(circle at center, #1a2b5c, #07043C 80%);
+}
+
+#start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-size: 80px;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8), 
+               0px 0px 30px rgba(255, 255, 255, 0.5);
+}
+
+.subtitle {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 100px;
+  opacity: 0.4;
+
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #4caf50, #81c784);
+  color: white;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0px 0px 15px rgba(76, 175, 80, 0.8);
+}
+
+button:hover {
+  background: linear-gradient(45deg, #81c784, #4caf50);
+  box-shadow: 0px 0px 30px rgba(76, 175, 80, 1);
+  transform: scale(1.1);
+}
+
+#viewer-screen, #final-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#bigbang-message, #loading-message {
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+#bigbang-message {
+  top: 40%;
+  font-size: 24px;
+  opacity: 0.9;
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+#loading-message {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.buffer-container {
+  margin-top: 10px;
+}
+
+#buffer-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.white-text {
+  color: white; /* 글자를 하얗게 설정 */
+}
+
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+#final-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 하단 정렬 */
+  align-items: center; /* 중앙 정렬 */
+  width: 100%;
+  height: 100%;
+}
+
+#spline-container {
+  width: 100%;
+  height: 100%;
+}
+
+#capture-container {
+  display: flex;
+  flex-direction: column; /* 버튼을 수직 정렬 */
+  align-items: center; /* 버튼 중앙 정렬 */
+  margin-bottom: 30px; /* 하단 여백 */
+}
+
+#capture-button, #screenshot-button {
+  padding: 10px 20px;
+  margin-top: 10px; /* 버튼 간격 조정 */
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #4caf50, #81c784);
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+#capture-button:hover, #screenshot-button:hover {
+  background: linear-gradient(45deg, #81c784, #4caf50);
+  transform: scale(1.05);
+}
